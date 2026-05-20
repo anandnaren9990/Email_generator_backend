@@ -3,11 +3,13 @@ from fastapi.responses import StreamingResponse
 from resources.llm_prompt import prompt
 from resources.llm_resources import model
 from services.llm_service import chat_with_llm
+from app_log import logger
 
 app = FastAPI()
 
 @app.post("/emailgenerator/")
 def generate_email(email_context):
+    logger.info("Email generator endpoint is called...")
     try:
         message = [
             {

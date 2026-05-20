@@ -19,3 +19,6 @@ build/
 .idea/
 *.swp
 *.swo
+
+#logs
+logs/
